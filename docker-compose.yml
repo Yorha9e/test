@@ -1,0 +1,43 @@
+services:
+  apache:
+    build: .
+    container_name: social-network_apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - social_network_network
+    depends_on:
+      - mysql
+    restart: always  # 确保 Apache 容器重启时能自动启动
+
+  mysql:
+    image: mysql:8.0
+    container_name: social_network
+    environment:
+      MYSQL_ROOT_PASSWORD: hxj365988
+      MYSQL_DATABASE: social_network
+      MYSQL_USER: yorha
+      MYSQL_PASSWORD: hxj365988
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - social_network_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "--host=localhost", "--user=root", "--password=hxj365988"]
+      interval: 30s
+      retries: 5
+      start_period: 60s  # 加长 start_period
+      timeout: 10s
+    restart: always  # 确保 MySQL 容器重启时能自动启动
+
+networks:
+  social_network_network:
+    driver: bridge
+
+volumes:
+  mysql-data:

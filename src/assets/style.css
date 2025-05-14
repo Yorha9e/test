@@ -1,0 +1,185 @@
+/* style.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;  /* 主背景色改为浅灰色 */
+    color: #333;  /* 默认文本颜色为深灰色 */
+}
+
+/* 页面的整体容器 */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* header样式 */
+header {
+    background-color: #007B9E;  /* 主色调：深蓝色背景 */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 导航链接样式 */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ccc;  /* 悬停效果改为灰色 */
+}
+
+/* 用户信息区域 */
+.user-info {
+    background-color: #FFFFFF;  /* 白色背景 */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007B9E;  /* 头像边框使用主色调：蓝色 */
+}
+
+/* 聊天记录区域 */
+.messages {
+    background-color: #FFFFFF;  /* 白色背景 */
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #007B9E;  /* 边框使用主色调：蓝色 */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f9f9f9;  /* 每条消息的背景色为白色 */
+    color: #333;  /* 文字颜色改为深灰色 */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.message .user {
+    font-weight: bold;
+    color: #007B9E;  /* 用户名颜色改为主色调：蓝色 */
+}
+
+/* 发送消息区域 */
+.send-message {
+    display: flex;
+    background-color: #FFFFFF;  /* 白色背景 */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+form {
+    background-color: #FFFFFF;  /* 白色背景 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.send-message input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;  /* 边框颜色为浅灰色 */
+    background-color: #f9f9f9;  /* 输入框背景为浅灰色 */
+    color: #333;  /* 输入框内文字颜色为深灰色 */
+    font-size: 1rem;
+}
+
+.send-message button {
+    width: 60px;
+    padding: 12px;
+    border: none;
+    background-color: #28A745;  /* 发送按钮使用绿色 */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.send-message button:hover {
+    background-color: #218838;  /* 按钮悬停效果使用深绿色 */
+}
+
+/* 返回首页链接 */
+.back-to-home {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #007B9E;  /* 链接颜色使用蓝色 */
+    text-decoration: none;
+}
+
+.back-to-home:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .user-info img.avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .send-message input {
+        font-size: 0.9rem;
+    }
+
+    .send-message button {
+        width: 50px;
+        font-size: 0.9rem;
+    }
+}

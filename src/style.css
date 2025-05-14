@@ -1,0 +1,204 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for centering the content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #007B9E;  /* 主色调：深蓝色背景 */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* User Profile Section */
+.user-profile {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-profile h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007B9E;  /* 使用主色调：蓝色 */
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info img.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007B9E;  /* 头像边框使用主色调：蓝色 */
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;  /* 使用深灰色 */
+}
+
+.profile-info input[type="file"] {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.profile-info button {
+    background-color: #007B9E;  /* 主色调：深蓝色 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-info button:hover {
+    background-color: #005f6a;  /* 深蓝色悬停效果 */
+}
+
+.profile-info p {
+    color: red;
+}
+
+/* Login and Register Styles */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input[type="text"], form input[type="password"], form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28A745;  /* 按钮改为绿色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;  /* 深绿色悬停效果 */
+}
+
+form a {
+    color: #007B9E;  /* 链接使用主色调：蓝色 */
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    color: #007B9E;  /* 标题使用主色调：蓝色 */
+    margin-bottom: 20px;
+}
+
+/* Footer (if needed) */
+footer {
+    background-color: #007B9E;  /* 主色调：深蓝色 */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .profile-info input[type="file"], .profile-info button {
+        width: 100%;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
